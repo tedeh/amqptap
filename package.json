@@ -1,0 +1,30 @@
+{
+  "name": "amqptap",
+  "version": "1.0.0",
+  "description": "Tap output from AMQP exchanges",
+  "license": "MIT",
+  "keywords": [
+    "amqp",
+    "rabbitmq",
+    "tap"
+  ],
+  "author": "Tedde Lundgren <mail@tedeh.net> (http://tedeh.net)",
+  "maintainers": "Tedde Lundgren <mail@tedeh.net> (http://tedeh.net)",
+  "bin": "./amqptap.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tedeh/jayson.git"
+  },
+  "homepage": "http://amqptap.tedeh.net",
+  "bugs": "https://github.com/tedeh/amqptap/issues",
+  "main": "amqptap",
+  "contributors": [
+    "Tedde Lundgren <mail@tedeh.net> (http://tedeh.net)"
+  ],
+  "dependencies": {
+    "amqp": "^0.2.4",
+    "commander": "^2.9.0",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {}
+}
