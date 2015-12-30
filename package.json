@@ -10,7 +10,7 @@
   ],
   "author": "Tedde Lundgren <mail@tedeh.net> (http://tedeh.net)",
   "maintainers": "Tedde Lundgren <mail@tedeh.net> (http://tedeh.net)",
-  "bin": "./amqptap.js",
+  "bin": "./bin/amqptap.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/tedeh/jayson.git"
@@ -22,11 +22,15 @@
     "Tedde Lundgren <mail@tedeh.net> (http://tedeh.net)"
   ],
   "dependencies": {
-    "amqp": "^0.2.4",
+    "amqplib": "^0.4.0",
     "commander": "^2.9.0",
     "debug": "^2.2.0",
     "eyes": "^0.1.8",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "when": "^3.7.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.0.2"
+  }
 }
