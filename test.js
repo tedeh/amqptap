@@ -92,48 +92,52 @@ describe('amqptap', function() {
   
   });
 
-  describe('string message', function() {
+  describe('amqp server', function() {
 
-    var state = getState({
-      format: 'string'
-    });
+    describe('string message', function() {
 
-    before(state.setup);
-    after(state.teardown);
+      var state = getState({
+        format: 'string'
+      });
 
-    it('should read a simple message', function(done) {
-      var write = 'Hello, World!';
-      return state.tap.open().then(function() {
-        state.publish(write).then(function() {
-          return state.read(true).then(function(read) {
-            read.should.equal(write);
-            done();
+      before(state.setup);
+      after(state.teardown);
+
+      it('should read a simple message', function(done) {
+        var write = 'Hello, World!';
+        return state.tap.open().then(function() {
+          state.publish(write).then(function() {
+            return state.read(true).then(function(read) {
+              read.should.equal(write);
+              done();
+            });
           });
         });
       });
-    });
-  
-  });
-
-  describe('object message', function() {
-
-    var state = getState({
-      format: 'object'
+    
     });
 
-    before(state.setup);
-    after(state.teardown);
+    describe('object message', function() {
 
-    it('should write and read an object', function(done) {
-      var write = {hello: 'world!'};
-      return state.tap.open().then(function() {
-        state.publish(write).then(function() {
-          return state.read().then(function(read) {
-            read.should.deepEqual(write);
-            done();
+      var state = getState({
+        format: 'object'
+      });
+
+      before(state.setup);
+      after(state.teardown);
+
+      it('should write and read an object', function(done) {
+        var write = {hello: 'world!'};
+        return state.tap.open().then(function() {
+          state.publish(write).then(function() {
+            return state.read().then(function(read) {
+              read.should.deepEqual(write);
+              done();
+            });
           });
         });
       });
+    
     });
   
   });
