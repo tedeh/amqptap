@@ -25,6 +25,12 @@ describe('amqptap', function() {
         tap._getFields(o).should.equal(o);
       });
 
+      it('should return the object as given when option is exactly "."', function() {
+        tap.options.fields = '.';
+        var o = {a: 3};
+        tap._getFields(o).should.equal(o);
+      });
+
       it('should return a single deep field if option is string', function() {
         tap.options.fields = 'a.b.c';
         tap._getFields({a: {b: {c: 3}}}).should.equal(3);

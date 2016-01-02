@@ -12,7 +12,7 @@ program.version(VERSION)
   .option('-u, --url <url>', 'url of amqp server', 'amqp://guest:guest@localhost:5672/')
   .option('-e, --exchange [value]', 'exchange name to bind to', 'amq.topic')
   .option('-i, --inspector [' + INSPECTORS.join('|') + ']', 'output inspector', parseInspector, 'json')
-  .option('-f, --fields [values]', 'desired output field(s)', parseFields, 'content')
+  .option('-f, --fields [values]', 'desired output field(s)', parseFields)
   .option('-r, --route [key]', 'routing key', '#')
   .parse(process.argv);
 

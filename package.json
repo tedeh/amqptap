@@ -13,9 +13,9 @@
   "bin": "./bin/amqptap.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tedeh/jayson.git"
+    "url": "git://github.com/tedeh/amqptap.git"
   },
-  "homepage": "http://amqptap.tedeh.net",
+  "homepage": "https://github.com/tedeh/amqptap",
   "bugs": "https://github.com/tedeh/amqptap/issues",
   "main": "lib",
   "contributors": [
