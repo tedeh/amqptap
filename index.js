@@ -36,7 +36,7 @@ inherits(AMQPTap, ReadableStream);
 /**
  * @summary _read stub
  */
-AMQPTap.prototype._read = function(size) {
+AMQPTap.prototype._read = function() {
   this._paused = false;
 };
 
@@ -127,7 +127,7 @@ AMQPTap.prototype._getFields = function(data) {
   if(!fields) return data;
   if(!_.isArray(fields)) return _.get(data, fields);
   return _.reduce(fields, function(out, field) {
-    out[field] = _.get(data, field)
+    out[field] = _.get(data, field);
     return out;
   }, {});
 };
