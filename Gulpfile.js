@@ -3,7 +3,7 @@ var gulp   = require('gulp');
 
 gulp.task('lint', function() {
   var paths = [
-    __dirname + '/index.js',
+    __dirname + '/lib/*.js',
     __dirname + '/bin/*.js'
   ];
   return gulp.src(paths)

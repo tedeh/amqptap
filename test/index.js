@@ -4,7 +4,7 @@ var should = require('should');
 var when = require('when');
 var exec = require('child_process').exec;
 var amqp = require('amqplib');
-var AMQPTap = require(__dirname);
+var AMQPTap = require(__dirname + '/../');
 
 var AMQP_URL = process.env['AMQP_URL'] || 'amqp://localhost'
 

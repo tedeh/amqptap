@@ -17,7 +17,7 @@
   },
   "homepage": "http://amqptap.tedeh.net",
   "bugs": "https://github.com/tedeh/amqptap/issues",
-  "main": "amqptap",
+  "main": "lib",
   "contributors": [
     "Tedde Lundgren <mail@tedeh.net> (http://tedeh.net)"
   ],
