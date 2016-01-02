@@ -9,11 +9,11 @@ var VERSION = require(__dirname + '/../package.json').version;
 var INSPECTORS = ['json', 'eyes', 'string'];
 
 program.version(VERSION)
-  .option('-u, --url <url>', 'URL of AMQP server', 'amqp://guest:guest@localhost:5672/')
-  .option('-e, --exchange [value]', 'Exchange to bind to', 'amq.topic')
-  .option('-i, --inspector [' + INSPECTORS.join('|') + ']', 'Output inspector', parseInspector, 'json')
-  .option('-f, --fields [values]', 'Desired output fields', parseFields, 'content')
-  .option('-r, --route [key]', 'Routing key', '#')
+  .option('-u, --url <url>', 'url of amqp server', 'amqp://guest:guest@localhost:5672/')
+  .option('-e, --exchange [value]', 'exchange name to bind to', 'amq.topic')
+  .option('-i, --inspector [' + INSPECTORS.join('|') + ']', 'output inspector', parseInspector, 'json')
+  .option('-f, --fields [values]', 'desired output field(s)', parseFields, 'content')
+  .option('-r, --route [key]', 'routing key', '#')
   .parse(process.argv);
 
 domain.run(function() {
@@ -21,7 +21,6 @@ domain.run(function() {
   var tap = new AMQPTap({
     url: program.url,
     exchange: program.exchange,
-    one: program.one,
     route: program.route,
     fields: program.fields,
     format: program.inspector
