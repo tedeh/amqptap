@@ -16,15 +16,17 @@ Install amqptap with `npm install -g` and you should have the `amqptap` executab
 
 ## Usage
 
-For all options run `amqptap --help`.
+For a list of all options run `amqptap --help`.
 
-The server URL is specified using the `--server` flag set to a value that corresponds to the [RabbitMQ URI specification][rabbitmq-url].
+`amqptap` creates an exclusive queue that is bound to the specified exchange, and will receive all messages on that exchange without interfering with other bound queues.
+
+The server URL is specified using the `-s` or `--server` flag set to a value that corresponds to the [RabbitMQ URI specification][rabbitmq-url].
 
 Without a specific server set, `amqptap` attempts to connect to a RabbitMQ server running on localhost using the guest account.
 
 ### Picking fields from the result
 
-Given a raw message output (almost: see automatic deserialization further down) from [amqplib][amqplib-repo] coming on `amq.topic` with routing key `foo.bar` that looks like this...
+Given a raw message output (see "Automatic deserialization") from [amqplib][amqplib-repo] coming on `amq.topic` with routing key `foo.bar` that looks like this.
 
 ````javascript
 {
@@ -94,6 +96,14 @@ $ amqptap -i json
 $ amqptap -i string
 "output is passed through String()"
 ````
+
+## Automatic deserialization
+
+By default, raw buffers are returned for the `content` field.
+
+Messages with a `contentType` header equal to `application/json` or `text/json` will have the `content` field automatically parsed with `JSON.parse`.
+
+Messages with a `contentType` header equal to `text/plain` will be parsed with `Buffer.prototype.toString`.
 
 ## Tests
 
