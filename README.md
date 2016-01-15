@@ -22,6 +22,8 @@ For a list of all options run `amqptap --help`.
 
 The server URL is specified using the `-s` or `--server` flag set to a value that corresponds to the [RabbitMQ URI specification][rabbitmq-url].
 
+Almost feature-complete URL for connecting to `foo.bar` using port 1234, vhost `baz`, username `tester` and password `password`: `amqp://tester:password@foo.bar:1234/baz`
+
 Without a specific server set, `amqptap` attempts to connect to a RabbitMQ server running on localhost using the guest account.
 
 ### Picking fields from the result
