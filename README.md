@@ -10,7 +10,7 @@ Sometimes it is difficult to know what goes on in your RabbitMQ exchanges. `amqp
 [badge-travis]: https://img.shields.io/travis/tedeh/amqptap/master.svg?style=flat-square
 [badge-npm]: https://img.shields.io/npm/v/amqptap.svg?style=flat-square
 
-[![travis build status][travis-img]][amqptap-travis] 
+[![travis build status][badge-travis]][amqptap-travis] 
 [![npm][badge-npm]][amqptap-npm]
 
 ## Installation
