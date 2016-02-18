@@ -30,8 +30,6 @@
     "when": "^3.7.7"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-jshint": "^2.0.0",
     "jshint": "^2.8.0",
     "mocha": "^2.3.4",
     "should": "^8.0.2"
