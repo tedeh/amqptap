@@ -4,11 +4,14 @@ Sometimes it is difficult to know what goes on in your RabbitMQ exchanges. `amqp
 
 [repo]: https://github.com/tedeh/amqptap
 [amqplib-repo]: https://github.com/squaremo/amqp.node
-[travis]: https://travis-ci.org/tedeh/amqptap
-[travis-img]: https://travis-ci.org/tedeh/amqptap.png?branch=master
+[amqptap-npm]: https://www.npmjs.com/package/amqptap
+[amqptap-travis]: https://travis-ci.org/tedeh/amqptap
 [rabbitmq-url]: https://www.rabbitmq.com/uri-spec.html
+[badge-travis]: https://img.shields.io/travis/tedeh/amqptap/master.svg?style=flat-square
+[badge-npm]: https://img.shields.io/npm/v/amqptap.svg?style=flat-square
 
-[![Build Status][travis-img]][travis] 
+[![travis build status][travis-img]][amqptap-travis] 
+[![npm][badge-npm]][amqptap-npm]
 
 ## Installation
 
