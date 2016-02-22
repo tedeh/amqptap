@@ -9,7 +9,7 @@ var VERSION = require(__dirname + '/../package.json').version;
 var INSPECTORS = ['json', 'eyes', 'string'];
 
 program.version(VERSION)
-  .option('-u, --url <url>', 'url of amqp server', 'amqp://guest:guest@localhost:5672/')
+  .option('-u, --url <url>', 'url of amqp server (amqp://user:pass@host:port/vhost)', 'amqp://guest:guest@localhost:5672/')
   .option('-e, --exchange [value]', 'exchange name to bind to', 'amq.topic')
   .option('-i, --inspector [' + INSPECTORS.join('|') + ']', 'output inspector', parseInspector, 'json')
   .option('-f, --fields [values]', 'desired output field(s)', parseFields)
